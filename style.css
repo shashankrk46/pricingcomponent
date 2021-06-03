@@ -81,7 +81,22 @@ body {
 .price-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 70px;
+}
+
+.price-container p {
+  color: var(--GrayishBlue);
+  letter-spacing: 2.5px;
+}
+.month {
+  margin-top: -20px;
+}
+.price {
+  display: inline-block;
+  font-size: 40px;
+  color: var(--DarkDesaturatedBlue);
+  font-weight: 700;
 }
 .price-scroll {
   border: 8px solid var(--LightGrayishBlue);
@@ -89,8 +104,7 @@ body {
   position: relative;
   margin-bottom: 70px;
 }
-.price-scroll::before {
-  content: "";
+.price-scroll .inner {
   border: 8px solid var(--SoftCyan);
   border-radius: 30px;
   position: absolute;
@@ -100,7 +114,7 @@ body {
 
   z-index: 10;
 }
-.price-scroll:after {
+.inner:after {
   content: " ";
   position: absolute;
   background: var(--StrongCyan) url(./images/icon-slider.svg) no-repeat center
@@ -157,11 +171,28 @@ body {
 
 .bottom-section {
   height: 40%;
-  padding: 40px;
+  padding: 20px 30px;
   display: flex;
   justify-content: space-between;
 }
 .trail {
   width: 180px;
-  height: 50px;
+  height: 45px;
+  background-color: var(--DarkDesaturatedBlue);
+  color: var(--PaleBlue);
+  margin: 20px 0px;
+  border: none;
+  border-radius: 20px;
+}
+.content {
+  text-align: left;
+}
+.content p {
+  font-size: 14px;
+  color: var(--GrayishBlue);
+  margin-bottom: 15px;
+}
+.content .check {
+  margin-right: 15px;
+  width: 10px;
 }
