@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Interactive pricing component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="text-content">
+        <h2>Simple, traffic-based pricing</h2>
+        <p>Sign-up for our 30-day trial. No credit card required.</p>
+      </div>
+      <div class="card-container">
+        <div class="top-section">
+          <div class="price-container">
+            <p>100Pageviews</p>
+            <h4>$ 16.00/month</h4>
+          </div>
+          <div class="price-scroll"></div>
+          <div class="billing-container">
+            <p>Monthly Billing</p>
+            <div class="switch-btn">
+              <div class="ball"></div>
+            </div>
+            <p>Yearly Billing</p>
+            <div class="discount">
+              <p>
+                25% discount
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-section">
+          <div class="content">
+            <p>
+              <img src="./images/icon-check.svg" alt="check-icon" />Unlimited
+              websites
+            </p>
+            <p>
+              <img src="./images/icon-check.svg" alt="check-icon" />100% data
+              ownership
+            </p>
+            <p>
+              <img src="./images/icon-check.svg" alt="check-icon" />Email
+              reports
+            </p>
+          </div>
+          <button class="trail">Start my trial</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>
