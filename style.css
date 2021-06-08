@@ -23,7 +23,8 @@
 body {
   font-family: "Manrope", sans-serif;
   background: url(./images/bg-pattern.svg) no-repeat;
-  /* margin: 30px; */
+
+  width: 1440px;
 }
 .container {
   display: flex;
@@ -99,34 +100,63 @@ body {
   font-weight: 700;
 }
 .price-scroll {
-  border: 8px solid var(--LightGrayishBlue);
+  /* border: 6px solid var(--LightGrayishBlue);
   border-radius: 30px;
   position: relative;
+  margin-bottom: 70px; */
+  width: 95%;
+  height: 20px;
   margin-bottom: 70px;
+  position: relative;
 }
-.price-scroll .inner {
-  border: 8px solid var(--SoftCyan);
-  border-radius: 30px;
-  position: absolute;
-  top: -8.5px;
-  left: -8px;
-  width: 50%;
 
-  z-index: 10;
+#slider {
+  /* margin: auto; */
+  -webkit-appearance: none;
+  outline: none;
+  overflow: hidden;
+  height: 12px;
+  width: 110%;
+  cursor: pointer;
+  border-radius: 5px; /* iOS */
+  background-color: var(--LightGrayishBlue);
 }
-.inner:after {
-  content: " ";
+#slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 48px;
+  height: 48px;
+  /* background: url(./images/icon-slider.svg) no-repeat center center darkcyan; */
+  cursor: pointer;
+  z-index: 3;
+  position: relative;
+}
+#selector {
+  height: 104px;
+  width: 48px;
   position: absolute;
-  background: var(--StrongCyan) url(./images/icon-slider.svg) no-repeat center
-    center;
-  top: -23px;
-  left: 230px;
-  width: 50px;
-  height: 45px;
-  border-radius: 50%;
-  z-index: 10;
-  box-shadow: 0px 18px 18px var(--SoftCyan);
+  top: 40px;
+  left: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
 }
+.selector-btn {
+  height: 48px;
+  width: 48px;
+  background: url(./images/icon-slider.svg) no-repeat center center
+    var(--StrongCyan);
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: hsl(174, 77%, 80%) 0px 30px 40px 7px;
+}
+.progressBar {
+  width: 50%;
+  height: 12px;
+  background: var(--SoftCyan);
+  border-radius: 5px;
+  position: absolute;
+  top: 4.2px;
+}
+
 .billing-container {
   display: flex;
   justify-content: flex-end;
