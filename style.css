@@ -143,10 +143,14 @@ body {
   height: 48px;
   width: 48px;
   background: url(./images/icon-slider.svg) no-repeat center center
-    var(--StrongCyan);
+    hsla(174, 86%, 45%, 0.6);
   position: absolute;
   border-radius: 50%;
   box-shadow: hsl(174, 77%, 80%) 0px 30px 40px 7px;
+}
+.selector-btn:hover,
+.selector-btn:focus {
+  background-color: var(--StrongCyan);
 }
 .progressBar {
   width: 50%;
@@ -166,7 +170,7 @@ body {
   color: var(--GrayishBlue);
   font-size: 14px;
 }
-.switch-btn {
+/* .switch-btn {
   position: relative;
   width: 48px;
   height: 25px;
@@ -184,6 +188,69 @@ body {
   transform: translateX(16px);
   border-radius: 50%;
   margin: 0px 5px;
+} */
+.switch {
+  position: relative;
+  top: -6px;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin: 0px 20px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: var(--StrongCyan);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--StrongCyan);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
 .discount {
   margin: 0px 10px;
@@ -213,7 +280,9 @@ body {
   margin: 20px 0px;
   border: none;
   border-radius: 20px;
+  cursor: pointer;
 }
+
 .content {
   text-align: left;
 }
@@ -225,4 +294,30 @@ body {
 .content .check {
   margin-right: 15px;
   width: 10px;
+}
+
+@media (max-width: 760px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 600px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+    height: 100vh;
+    margin: 10px 0px;
+    padding: 20px;
+  }
+  .card-container {
+    max-width: 440px;
+    width: 480px;
+    height: 1000px;
+    text-align: center;
+
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
 }
